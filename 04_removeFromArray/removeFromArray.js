@@ -1,16 +1,18 @@
-const removeFromArray = function(arr, value) {
+const removeFromArray = function(arr, ...values) {
 
-    // console.log(arr);
-    // console.log(x);
-    // const id = arr.indexOf(x);
-    // console.log(id);
-    // return arr.splice(id, 1);
+	return arr.filter(item => !values.includes(item));
 
-    // passes first test but ;;
+    // // console.log(arr);
+    // // console.log(x);
+    // // const id = arr.indexOf(x);
+    // // console.log(id);
+    // // return arr.splice(id, 1);
+
+    // // passes first test but ;;
     
-    return arr.filter(function(ele){
-        return ele !== value;
-    });
+    // return arr.filter(function(ele){
+    //     return ele !== values;
+    // });
 
 };
 
