@@ -7,19 +7,23 @@ const subtract = function(num1, num2) {
 };
 
 const sum = function(arr) {
-  let sumOfArray = 0;
-  for (let i = 0; i < arr.length; i++) {
-      sumOfArray += arr[i];
-  }
-  return sumOfArray;
+  // let sumOfArray = 0;
+  // for (let i = 0; i < arr.length; i++) {
+  //     sumOfArray += arr[i];
+  // }
+  // return sumOfArray;
+  return arr.reduce((total, current) => total + current, 0)
 };
 
-const multiply = function(num1, num2) {
-  return num1 * num2;
+
+const multiply = function(arr) {
+  return arr.length
+  ? arr.reduce((accumulator, nextItem) => accumulator * nextItem)
+  : 0;
 };
 
 const power = function(num1, num2) {
-  return num1 ** num2;
+  return Math.pow(num1, num2);
 };
 
 const factorial = function(num) {
